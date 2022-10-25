@@ -11,6 +11,7 @@ namespace FLASHBACKS.Models
         [StringLength(255)]
         public string Name { get; set; }
         [Required]
+        [Display(Name = "Street_address")]
 
         public string street_address { get; set; }
         [Required]
@@ -30,6 +31,7 @@ namespace FLASHBACKS.Models
         public bool IsSubscribed { get; set; }
 
         public MembershipType MembershipType { get; set; }
+        [Display(Name = "Membership")]
         public byte MembershipTypeId { get; set; }
 
     }

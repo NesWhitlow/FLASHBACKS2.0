@@ -192,6 +192,18 @@
     <Compile Include="Migrations\202210041557106_thirdMigration.designer.cs">
       <DependentUpon>202210041557106_thirdMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202210201932459_oneMigration.cs" />
+    <Compile Include="Migrations\202210201932459_oneMigration.designer.cs">
+      <DependentUpon>202210201932459_oneMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210222304582_week7Migration.cs" />
+    <Compile Include="Migrations\202210222304582_week7Migration.designer.cs">
+      <DependentUpon>202210222304582_week7Migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210251508012_review3Migration.cs" />
+    <Compile Include="Migrations\202210251508012_review3Migration.designer.cs">
+      <DependentUpon>202210251508012_review3Migration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -200,6 +212,8 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="ViewModels\CustomerFormViewModel.cs" />
+    <Compile Include="ViewModels\MovieFormViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
@@ -267,9 +281,12 @@
     <Content Include="Views\Movies\Details.cshtml" />
     <Content Include="Views\Customers\Details.cshtml" />
     <Content Include="Views\Customers\Index.cshtml" />
+    <Content Include="Views\Movies\MovieForm.cshtml" />
+    <Content Include="Views\Customers\CustomerForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\customerform\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -296,6 +313,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202210041557106_thirdMigration.resx">
       <DependentUpon>202210041557106_thirdMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210201932459_oneMigration.resx">
+      <DependentUpon>202210201932459_oneMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210222304582_week7Migration.resx">
+      <DependentUpon>202210222304582_week7Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210251508012_review3Migration.resx">
+      <DependentUpon>202210251508012_review3Migration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
