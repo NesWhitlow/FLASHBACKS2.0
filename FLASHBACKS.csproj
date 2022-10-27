@@ -204,8 +204,25 @@
     <Compile Include="Migrations\202210251508012_review3Migration.designer.cs">
       <DependentUpon>202210251508012_review3Migration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202210261523483_section5Migration.cs" />
+    <Compile Include="Migrations\202210261523483_section5Migration.designer.cs">
+      <DependentUpon>202210261523483_section5Migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210262341244_exercise4Migration.cs" />
+    <Compile Include="Migrations\202210262341244_exercise4Migration.designer.cs">
+      <DependentUpon>202210262341244_exercise4Migration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210262348378_exercise4Migration1.cs" />
+    <Compile Include="Migrations\202210262348378_exercise4Migration1.designer.cs">
+      <DependentUpon>202210262348378_exercise4Migration1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202210271513099_exercise4Migration2.cs" />
+    <Compile Include="Migrations\202210271513099_exercise4Migration2.designer.cs">
+      <DependentUpon>202210271513099_exercise4Migration2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\ageValidation.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\Genre.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -286,7 +303,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\customerform\" />
+    <Folder Include="Images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -322,6 +339,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202210251508012_review3Migration.resx">
       <DependentUpon>202210251508012_review3Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210261523483_section5Migration.resx">
+      <DependentUpon>202210261523483_section5Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210262341244_exercise4Migration.resx">
+      <DependentUpon>202210262341244_exercise4Migration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210262348378_exercise4Migration1.resx">
+      <DependentUpon>202210262348378_exercise4Migration1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202210271513099_exercise4Migration2.resx">
+      <DependentUpon>202210271513099_exercise4Migration2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

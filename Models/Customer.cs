@@ -7,28 +7,36 @@ namespace FLASHBACKS.Models
     public class Customer
     {
         public int Id { get; set; }
-        [Required]
-        [StringLength(255)]
+        [Required(ErrorMessage = "A customer name is required")]
+        [StringLength(45)]
+
         public string Name { get; set; }
-        [Required]
-        [Display(Name = "Street_address")]
+        [Required(ErrorMessage = "A street address is required")]
+        [StringLength(30)]
+        [Display(Name = "Street Address")]
 
         public string street_address { get; set; }
-        [Required]
+        [Required(ErrorMessage = "A city is required")]
+        [StringLength(30)]
 
         public string city_address { get; set; }
-        [Required]
+        [Required(ErrorMessage = "A state is required")]
         [StringLength(2)]
 
         public string state_address { get; set; }
-        [Required]
+        [Required(ErrorMessage = "A zip code is required")]
 
         public int zip_address { get; set; }
         [Required]
+
         public long phone_address { get; set; }
+        [EmailAddress]
         public string email_address { get; set; }
+
+        [ageValidation]
         public DateTime? birthdate { get; set; }
         public bool IsSubscribed { get; set; }
+
 
         public MembershipType MembershipType { get; set; }
         [Display(Name = "Membership")]
