@@ -5,6 +5,10 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Web.Http;
+using FLASHBACKS.App_Start;
+using AutoMapper;
+
 
 namespace FLASHBACKS
 {
@@ -12,6 +16,8 @@ namespace FLASHBACKS
     {
         protected void Application_Start()
         {
+            Mapper.Initialize(c => c.AddProfile<MappingProfile>());
+            GlobalConfiguration.Configure(WebApiConfig.Register);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
