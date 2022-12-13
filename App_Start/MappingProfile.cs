@@ -1,10 +1,6 @@
 ﻿using AutoMapper;
 using FLASHBACKS.Dtos;
 using FLASHBACKS.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace FLASHBACKS.App_Start
 {
@@ -15,6 +11,8 @@ namespace FLASHBACKS.App_Start
             // Domain to Dto
             CreateMap<Customer, CustomerDto>();
             CreateMap<Movie, MovieDto>();
+            CreateMap<MembershipType, MembershipTypeDto>();
+            CreateMap<Genre, GenreDto>();
 
 
             // Dto to Domain

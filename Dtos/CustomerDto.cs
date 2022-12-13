@@ -30,5 +30,7 @@ namespace FLASHBACKS.Dtos
         public bool IsSubscribed { get; set; }
 
         public byte MembershipTypeId { get; set; }
+
+        public MembershipTypeDto MembershipType { get; set; }
     }
 }

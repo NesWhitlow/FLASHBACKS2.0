@@ -2,7 +2,7 @@
 using FLASHBACKS.Dtos;
 using FLASHBACKS.Models;
 using System;
-using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web.Http;
 
@@ -16,12 +16,14 @@ namespace FLASHBACKS.Controllers.Api
         {
             _context = new ApplicationDbContext();
         }
-
-        public IEnumerable<MovieDto> GetMovies()
+        //GET return all movies in the database /api/movies
+        public IHttpActionResult GetCustomers()
         {
-            return _context.Movies.ToList().Select(Mapper.Map<Movie, MovieDto>);
+            var movieDtos = _context.Movies.Include(c => c.Genre).ToList().Select(Mapper.Map<Movie, MovieDto>);
+            return Ok(movieDtos);
         }
 
+        //GET retrieve individual movies from database using id /api/movies/id#
         public IHttpActionResult GetMovie(int id)
         {
             var movie = _context.Movies.SingleOrDefault(c => c.Id == id);
@@ -32,6 +34,7 @@ namespace FLASHBACKS.Controllers.Api
             return Ok(Mapper.Map<Movie, MovieDto>(movie));
         }
 
+        //POST create new movies in database /api/movies/
         [HttpPost]
         public IHttpActionResult CreateMovie(MovieDto movieDto)
         {
@@ -46,6 +49,7 @@ namespace FLASHBACKS.Controllers.Api
             return Created(new Uri(Request.RequestUri + "/" + movie.Id), movieDto);
         }
 
+        //PUT modify existing movies in the database using id /api/movies/id#
         [HttpPut]
         public IHttpActionResult UpdateMovie(int id, MovieDto movieDto)
         {
@@ -64,6 +68,7 @@ namespace FLASHBACKS.Controllers.Api
             return Ok();
         }
 
+        //DELETE delete movies in the database using id /api/movies/id#
         [HttpDelete]
         public IHttpActionResult DeleteMovie(int id)
         {

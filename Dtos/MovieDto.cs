@@ -1,5 +1,4 @@
-﻿using FLASHBACKS.Models;
-using System;
+﻿using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace FLASHBACKS.Dtos
@@ -11,7 +10,7 @@ namespace FLASHBACKS.Dtos
         [StringLength(255)]
         public string Name { get; set; }
 
-        public Genre Genre { get; set; }
+        public GenreDto Genre { get; set; }
         [Required(ErrorMessage = "Please select a Genre.")]
         public byte GenreId { get; set; }
 
